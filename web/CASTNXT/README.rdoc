@@ -21,7 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
     	To run server locally use...
-		-rails s -p $PORT
+	```	
+	rails s -p $PORT
+	```
 
 * ...
 
