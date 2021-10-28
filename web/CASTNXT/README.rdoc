@@ -6,14 +6,17 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-	rvm use 2.6.6
-	2.6.6
+	(rvm install 2.6.6)
+	rvm use 2.6.6 
 * System dependencies
 
 * Configuration
 
 * Database creation
 	sqlite3 (set up but no seeds or test)
+	
+	rake db:migrate
+	rake db:seed
 * Database initialization
 
 * How to run the test suite
