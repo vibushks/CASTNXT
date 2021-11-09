@@ -1,0 +1,2 @@
+class Gform < ApplicationRecord
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>View link</th>
+      <th>Edit link</th>
+      <th>Sheets link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gforms.each do |gform| %>
+      <tr>
+        <td><%= gform.name %></td>
+        <td><%= gform.view_link %></td>
+        <td><%= gform.edit_link %></td>
+        <td><%= gform.sheets_link %></td>
+        <td><%= link_to 'Show', gform %></td>
+        <td><%= link_to 'Edit', edit_gform_path(gform) %></td>
+        <td><%= link_to 'Destroy', gform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gform', new_gform_path %>
