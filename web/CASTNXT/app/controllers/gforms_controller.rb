@@ -15,6 +15,16 @@ class GformsController < ApplicationController
     @gform = Gform.new
   end
 
+  # GET /gforms/1/preview
+  def preview
+    @gform = Gform.find(params[:id])
+  end
+  
+  def edit_form
+    @gform = Gform.find(params[:id])
+  end
+  
+
   # GET /gforms/1/edit
   def edit
   end

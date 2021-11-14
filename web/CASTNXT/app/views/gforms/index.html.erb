@@ -20,9 +20,11 @@
         <td><%= gform.view_link %></td>
         <td><%= gform.edit_link %></td>
         <td><%= gform.sheets_link %></td>
-        <td><%= link_to 'Show', gform %></td>
-        <td><%= link_to 'Edit', edit_gform_path(gform) %></td>
-        <td><%= link_to 'Destroy', gform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Preview', preview_path(gform) %></td>
+        <td><%= link_to 'Edit Form', edit_form_path(gform) %></td>
+        <td><%= link_to 'View Links', gform %></td>       
+        <td><%= link_to 'Edit Links', edit_gform_path(gform) %></td>
+        <td><%= link_to 'Remove Form', gform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
