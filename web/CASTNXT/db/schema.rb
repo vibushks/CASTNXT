@@ -21,13 +21,4 @@ ActiveRecord::Schema.define(version: 2021_11_08_235425) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "token"
-    t.string "name"
-    t.string "email"
-    t.string "accType"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
