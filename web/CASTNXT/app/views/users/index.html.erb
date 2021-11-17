@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Token</th>
       <th>Email</th>
       <th>Name</th>
       <th>Usertype</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.token %></td>
         <td><%= user.email %></td>
         <td><%= user.name %></td>
         <td><%= user.userType %></td>

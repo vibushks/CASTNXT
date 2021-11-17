@@ -1,7 +1,37 @@
-<%= google_sign_in_button 'Sign in with my Google account', proceed_to: gauthcontroller_handle_url %>
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-<%= google_sign_in_button image_tag('', alt: 'Google'), proceed_to: gforms_url %>
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= google_sign_in_button proceed_to: gforms_url do %>
-  Sign in with my <%= image_tag('', alt: 'Google') %> account
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :token %>
+    <%= form.text_field :token %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userType %>
+    <%= form.text_field :userType %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

@@ -22,13 +22,15 @@ class GauthcontrollerController < ApplicationController
       #puts id_token
       if id_token
         #puts id_token
-        user = User.where(token: GoogleSignIn::Identity.new(id_token).user_id)
+        user_google = GoogleSignIn::Identity.new(id_token)
+        user = User.where(token: user_google.user_id)
         puts "user_id"
-        puts user
-        if User.exists?(:token => id_token)
+        name = user_google.name
+        email = user_google.email_address
+        if User.exists?(:email => email)
           true
         else
-          user = User.create(name:"aea", token:id_token)
+          user = User.create(name:name, email:email, token:id_token, userType:"default")
           puts "After create"
           user.save
           
