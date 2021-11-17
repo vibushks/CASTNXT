@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Token</th>
-      <th>Name</th>
       <th>Email</th>
-      <th>Acctype</th>
+      <th>Name</th>
+      <th>Usertype</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.token %></td>
-        <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.accType %></td>
+        <td><%= user.name %></td>
+        <td><%= user.userType %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
