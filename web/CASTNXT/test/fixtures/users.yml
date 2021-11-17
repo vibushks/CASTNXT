@@ -2,12 +2,12 @@
 
 one:
   token: MyString
-  email: MyString
   name: MyString
-  userType: MyString
+  email: MyString
+  accType: MyString
 
 two:
   token: MyString
-  email: MyString
   name: MyString
-  userType: MyString
+  email: MyString
+  accType: MyString
