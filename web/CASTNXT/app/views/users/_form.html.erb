@@ -1,0 +1,7 @@
+<%= google_sign_in_button 'Sign in with my Google account', proceed_to: gforms_url %>
+
+<%= google_sign_in_button image_tag('', alt: 'Google'), proceed_to: gforms_url %>
+
+<%= google_sign_in_button proceed_to: gforms_url do %>
+  Sign in with my <%= image_tag('', alt: 'Google') %> account
+<% end %>
