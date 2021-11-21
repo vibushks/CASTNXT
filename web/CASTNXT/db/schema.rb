@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2021_11_17_044020) do
 
+  create_table "forms", force: :cascade do |t|
+    t.string "name"
+    t.text "view_link"
+    t.text "edit_link"
+    t.text "sheets_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "gforms", force: :cascade do |t|
     t.string "name"
     t.string "view_link"
