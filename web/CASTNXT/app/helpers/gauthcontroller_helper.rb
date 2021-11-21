@@ -1,0 +1,2 @@
+module GauthcontrollerHelper
+end
