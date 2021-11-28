@@ -24,6 +24,9 @@ class GformsController < ApplicationController
     @gform = Gform.find(params[:id])
   end
   
+  def view_responses
+    @gform = Gform.find(params[:id])
+  end
 
   # GET /gforms/1/edit
   def edit
