@@ -2,7 +2,15 @@ class GformsController < ApplicationController
   before_action :set_gform, only: %i[ show edit update destroy ]
 
   # GET /gforms or /gforms.json
+  def profile
+    @gforms = Gform.all
+  end
+  
   def index
+    @gforms = Gform.all
+  end
+  
+  def admin
     @gforms = Gform.all
   end
 

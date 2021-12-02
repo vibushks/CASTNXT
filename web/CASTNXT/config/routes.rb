@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   get '/:id/edit_form', to: 'gforms#edit_form', as: 'edit_form'
   
   resources :gforms
+  #get 'users/profile'
+  #get 'users/designers'
+  #get 'users/admin'
+  
+  get '/:id/profile', to: 'users#profile', as: 'user_profile'
+  get '/:id/designers', to: 'users#designers', as: 'user_designer'
+  get '/:id/admin', to: 'users#admin', as: 'user_admin'
   # map '/' to be a redirect to '/movies'
-  root :to => redirect('/users')
+  root :to => redirect('/users/new')
 end
