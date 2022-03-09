@@ -10,21 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_17_044020) do
+ActiveRecord::Schema.define(version: 2022_03_08_182000) do
 
-  create_table "gforms", force: :cascade do |t|
+  create_table "applicants", force: :cascade do |t|
+    t.integer "users_id"
+    t.integer "events_id"
+    t.string "fname"
+    t.string "lname"
+    t.string "email"
+    t.string "phone"
+    t.string "city"
+    t.string "answers"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["events_id"], name: "index_applicants_on_events_id"
+    t.index ["users_id"], name: "index_applicants_on_users_id"
+  end
+
+  create_table "events", force: :cascade do |t|
     t.string "name"
-    t.string "view_link"
-    t.string "edit_link"
-    t.string "sheets_link"
+    t.string "template"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "token"
     t.string "email"
     t.string "name"
+    t.string "password"
     t.string "userType"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
